@@ -1,0 +1,11 @@
+class Monitor:
+    def __init__(self, model:str,width:int,height:int):
+        self.model = model
+        self.width = width
+        self.height = height
+
+    def get_resolution(self):
+        return self.width,self.height
+
+    def get_total_pixels(self):
+        return self.width * self.height
