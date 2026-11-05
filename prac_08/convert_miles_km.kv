@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_miles
+            text: ''
+            font_size: 36
+            multiline: False
+            on_text: app.handle_calculate(self.text)
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.3
+            Button:
+                text: 'Up'
+                font_size: 24
+                on_press: app.handle_increment(input_miles.text, 1)
+            Button:
+                text: 'Down'
+                font_size: 24
+                on_press: app.handle_increment(input_miles.text, -1)
+    Label:
+        text: app.output_km
+        font_size: 36
+        color: (1, 1, 0, 1)
